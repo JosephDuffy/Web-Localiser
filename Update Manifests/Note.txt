@@ -1,0 +1,1 @@
+weblocaliser.plist is current, the other a legacy
