@@ -4,10 +4,12 @@
 <dict>
 	<key>Author</key>
 	<string>Joseph Duffy</string>
+	<key>Builder Version</key>
+	<string>11601.2.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>Web Localiser</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.duffydesigns.weblocaliser</string>
+	<string>net.yetii.weblocaliser</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -41,6 +43,8 @@
 	</dict>
 	<key>Description</key>
 	<string>Change the current page from URL Domain 1 to URL Domain 2, or Visa-Versa.</string>
+	<key>DeveloperIdentifier</key>
+	<string>HGVGKE57E6</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
