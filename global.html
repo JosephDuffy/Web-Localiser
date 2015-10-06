@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Web Localiser</title>
-	<script type="text/javascript" charset="utf-8">
+    <title>Web Localiser</title>
+    <script type="text/javascript" charset="utf-8">
         // Register for the validate and command events.
         safari.application.addEventListener("command", performCommand, false);
         safari.application.addEventListener("validate", validateCommand, false);
 
         function performCommand(event) {
-        	// Checks the command is to change the URL.
-        	if (event.command !== "ChangeURL") {
-        		return;
+            // Checks the command is to change the URL.
+            if (event.command !== "ChangeURL") {
+                return;
             }
 
-        	// Get the current tab's URL. This URL can be undefined if the
-        	// page is blank or the user is at a page like Top Sites.
+            // Get the current tab's URL. This URL can be undefined if the
+            // page is blank or the user is at a page like Top Sites.
 
-        	var currentURL = event.target.browserWindow.activeTab.url;
+            var currentURL = event.target.browserWindow.activeTab.url;
 
-        	// Sets convert1 and convert2 to the users prefernces, alowing changes of .co.uk, .fr etc.
+            // Sets convert1 and convert2 to the users prefernces, alowing changes of .co.uk, .fr etc.
 
-        	var convert1 = safari.extension.settings.URLSettings1;
-        	var convert2 = safari.extension.settings.URLSettings2;
+            var convert1 = safari.extension.settings.URLSettings1;
+            var convert2 = safari.extension.settings.URLSettings2;
 
-        	// Sets the site-specific setting, used only for apple.com to apple.com/uk
+            // Sets the site-specific setting, used only for apple.com to apple.com/uk
 
-        	var sitespecific = safari.extension.settings.SiteSpecific;
+            var sitespecific = safari.extension.settings.SiteSpecific;
 
-        	if (currentURL)
+            if (currentURL)
 
-        	// Begin Site Specific Conversions
+            // Begin Site Specific Conversions
 
-        	if (currentURL.indexOf(".apple.com") != -1) {
-            	if (currentURL.indexOf("store.apple.com") != -1) {
-            		if (sitespecific == ".com/ca/fr") {
-            			event.target.browserWindow.activeTab.url = currentURL.replace(/\.com\/../ig, ".com/xf")
-            		} else {
-                		event.target.browserWindow.activeTab.url = currentURL.replace(/\.com\/../ig, sitespecific)
-            		}
-            	} else if(currentURL.indexOf(".apple.com") != -1) {
-            		event.target.browserWindow.activeTab.url = currentURL.replace(/\.com/ig, sitespecific)
-            	}
-        	} else if (currentURL.indexOf(".apple.com") != 1) {
+            if (currentURL.indexOf(".apple.com") != -1) {
+                if (currentURL.indexOf("store.apple.com") != -1) {
+                    if (sitespecific == ".com/ca/fr") {
+                        event.target.browserWindow.activeTab.url = currentURL.replace(/\.com\/../ig, ".com/xf")
+                    } else {
+                        event.target.browserWindow.activeTab.url = currentURL.replace(/\.com\/../ig, sitespecific)
+                    }
+                } else if(currentURL.indexOf(".apple.com") != -1) {
+                    event.target.browserWindow.activeTab.url = currentURL.replace(/\.com/ig, sitespecific)
+                }
+            } else if (currentURL.indexOf(".apple.com") != 1) {
                 // End Site Specific Conversions
                 // Begin Regular .com to .co.uk (Defualt) conversions
-            	if (currentURL.indexOf(convert1) != -1) {
-        			event.target.browserWindow.activeTab.url = currentURL.replace(convert1, convert2);
+                if (currentURL.indexOf(convert1) != -1) {
+                    event.target.browserWindow.activeTab.url = currentURL.replace(convert1, convert2);
                 } else if (currentURL.indexOf(convert2) != -1) {
-        			event.target.browserWindow.activeTab.url = currentURL.replace(convert2, convert1);
+                    event.target.browserWindow.activeTab.url = currentURL.replace(convert2, convert1);
                 }
-        	}
+            }
         }
 
         function validateCommand(event) {
-        	// Checks the command is to change the URL.
-        	if (event.command !== "ChangeURL") {
-        		return;
+            // Checks the command is to change the URL.
+            if (event.command !== "ChangeURL") {
+                return;
             }
 
-        	// Disable the target if the current tab has no URL.
-        	event.target.disabled = !event.target.browserWindow.activeTab.url;
+            // Disable the target if the current tab has no URL.
+            event.target.disabled = !event.target.browserWindow.activeTab.url;
         }
     </script>
 </head>
