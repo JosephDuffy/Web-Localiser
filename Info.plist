@@ -58,8 +58,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>https://josephduffy.co.uk/projects/weblocaliser/safari-update.plist</string>
+	<string>https://josephduffy.co.uk/projects/web-localiser/safari/update.plist</string>
 	<key>Website</key>
-	<string>https://josephduffy.co.uk/projects/weblocaliser/</string>
+	<string>https://josephduffy.co.uk/projects/web-localiser/</string>
 </dict>
 </plist>
