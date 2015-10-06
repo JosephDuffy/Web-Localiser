@@ -96,7 +96,7 @@
 		<key>Key</key>
 		<string>SiteSpecific</string>
 		<key>Title</key>
-		<string>Site Specific (IE &quot;Apple.com/uk&quot;)</string>
+		<string>Site Specific (e.g., &quot;domain.com/uk/&quot;)</string>
 		<key>Titles</key>
 		<array>
 			<string>United Kingdom</string>
