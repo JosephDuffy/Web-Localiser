@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.2</string>
+	<string>2.2.1</string>
 	<key>CFBundleVersion</key>
-	<string>9</string>
+	<string>10</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -54,8 +54,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://www.duffydesigns.co.uk/downloads/weblocaliser.plist</string>
+	<string>https://josephduffy.co.uk/projects/weblocaliser/safari-update.plist</string>
 	<key>Website</key>
-	<string>http://www.DuffyDesigns.co.uk</string>
+	<string>https://josephduffy.co.uk/projects/weblocaliser/</string>
 </dict>
 </plist>
