@@ -28,7 +28,7 @@
 				<key>Identifier</key>
 				<string>ChangeURL</string>
 				<key>Image</key>
-				<string>Icon-16.png</string>
+				<string>Assets/Toolbar Item Image.png</string>
 				<key>Label</key>
 				<string>Change URL</string>
 				<key>Tool Tip</key>
