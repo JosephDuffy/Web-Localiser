@@ -9,7 +9,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Web Localiser</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.yetii.weblocaliser</string>
+	<string>com.duffydesigns.weblocaliser</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
